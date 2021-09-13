@@ -1,25 +1,29 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Typography } from '@material-ui/core';
+import { useMediaQuery } from '@material-ui/core';
+import '@fontsource/roboto';
+
+import './App.css';
 
 function App() {
-  const [image, setImage] = useState(false);
-  const [url, setUrl] = useState()
-  const handleClick = () =>{
+  const [url, setUrl] = useState();
+  const [explanation, setExplanation] = useState();
+
+  useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-    .then((data)=>{
-      console.log(data.data)
-      setImage(true);
-      setUrl(data.data.url)
-    })
-    .catch((error)=>{
-      console.log(error)
-    })
-  }
+      .then((data) => {
+        setUrl(data.data.url)
+        setExplanation(data.data.explanation)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  })
   return (
     <div>
-
-      { !image && <button onClick={handleClick}>click</button>}
-      { image && <img src = {url} />}
+          <img id = "image" src={url} alt = "image of stars" />
+          <Typography  variant="body1">{explanation}</Typography>
     </div>
   );
 }
