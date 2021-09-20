@@ -4,5 +4,13 @@
 }
 
 #explanation{
-    
+
+}
+
+.middle{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    color: white;
 }
