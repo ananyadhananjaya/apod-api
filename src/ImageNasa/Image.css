@@ -1,0 +1,11 @@
+#Heading{
+    font-family:'Courier New', Courier, monospace;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#Image{
+    height: 50%;
+    width: 100%;
+}

@@ -11,8 +11,9 @@ function Header() {
                         color = 'inherit'
                         edge = 'start'
                         size = 'large'
+                        onClick =  {()=> alert("sidebar yet to be built")} 
                             >
-                        <MenuIcon onClick =  {()=> alert("sidebar yet to be built")} />
+                        <MenuIcon/>
                     </IconButton>
                     <Typography variant ='h5'>
                         Apod-api
