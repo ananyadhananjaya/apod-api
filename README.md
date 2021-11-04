@@ -1,2 +1,7 @@
 # apod-api
-A simple project using apod api from nasa.
+
+https://api-ax-98.web.app/ link to visit the site.
+
+- React library
+- APOD api from nasa
+- Firebase hosting
